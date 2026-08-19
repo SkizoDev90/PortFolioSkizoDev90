@@ -1,0 +1,208 @@
+#content-proyects{
+    padding: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.proyect{
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 2rem;
+    box-shadow: 0 0 40px rgba(148, 163, 184, 0.15), 0 0 80px rgba(148, 163, 184, 0.06);
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.proyect:hover{
+    border-color: rgba(148, 163, 184, 0.45);
+    box-shadow: 0 0 50px rgba(148, 163, 184, 0.25), 0 0 100px rgba(148, 163, 184, 0.1);
+}
+
+.box1-proyect{
+    width: 40%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.box2-proyect{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box2-proyect .proyect-title{
+    font-family: 'Sekuya', serif;
+    color: #cbd5e1;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 20px rgba(203, 213, 225, 0.35), 0 0 60px rgba(203, 213, 225, 0.15);
+    margin-bottom: 0.5rem;
+}
+
+.box2-proyect .proyect-desc{
+    color: #94a3b8;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+    text-shadow: 0 0 12px rgba(148, 163, 184, 0.12), 0 0 30px rgba(148, 163, 184, 0.05);
+}
+
+.box2-proyect .proyect-title::after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(148, 163, 184, 0.1), #cbd5e1, rgba(148, 163, 184, 0.1));
+    box-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
+    margin-bottom: 0.8rem;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 1rem;
+}
+
+.imgCarrusel{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.swiper-slide > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    color: rgba(148, 163, 184, 0.7) !important;
+    transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    color: #cbd5e1 !important;
+}
+
+.proyect-half{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    height: 28vh;
+}
+
+.proyect:not(.proyect-double) .proyect-half{
+    height: auto;
+}
+
+.proyect:not(.proyect-double) .box1-proyect{
+    height: 30vh;
+}
+
+.proyect-half .box1-proyect{
+    width: 45%;
+}
+
+.proyect-half .box2-proyect{
+    width: 55%;
+}
+
+.proyect-tech{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.tech-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tech-label{
+    font-family: 'Sekuya', serif;
+    color: #cbd5e1;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 12px rgba(203, 213, 225, 0.25);
+}
+
+.tech-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tech-tag{
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover{
+    color: #cbd5e1;
+    border-color: rgba(148, 163, 184, 0.45);
+    background: rgba(148, 163, 184, 0.18);
+    box-shadow: 0 0 12px rgba(148, 163, 184, 0.15);
+}
+
+@media (max-width: 768px){
+    .proyect{
+        padding: 1rem;
+    }
+
+    .proyect-half{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .proyect-half .box1-proyect,
+    .proyect-half .box2-proyect{
+        width: 100%;
+    }
+
+    .proyect-half .box1-proyect{
+        height: 25vh;
+    }
+
+    .box2-proyect{
+        padding: 0.5rem 0 0 0;
+    }
+}

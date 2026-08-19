@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#scroll-container {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.brand-text,
+.navbar .nav-link {
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 12px rgba(148, 163, 184, 0.20), 0 0 30px rgba(148, 163, 184, 0.08);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand-text:hover,
+.navbar .nav-link:hover {
+    color: #cbd5e1;
+    text-shadow: 0 0 16px rgba(203, 213, 225, 0.35), 0 0 40px rgba(203, 213, 225, 0.15);
+}
+
+.navbar .nav-link svg,
+.navbar .nav-link lord-icon {
+    width: 34px;
+    height: 34px;
+    fill: #94a3b8;
+    filter: drop-shadow(0 0 6px rgba(148, 163, 184, 0.20));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover svg,
+.navbar .nav-link:hover lord-icon {
+    filter: drop-shadow(0 0 10px rgba(203, 213, 225, 0.4));
+    transform: scale(1.1);
+}
+
+.hero-title {
+    font-family: 'Sekuya', serif;
+    color: #94a3b8;
+    font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 14px rgba(148, 163, 184, 0.12), 0 0 40px rgba(148, 163, 184, 0.05);
+    margin-bottom: 0.6rem;
+}
+
+.name-highlight {
+    display: inline-block;
+    position: relative;
+    color: #cbd5e1;
+    font-weight: 400;
+    font-size: 1.15em;
+    text-shadow: 0 0 20px rgba(203, 213, 225, 0.35), 0 0 60px rgba(203, 213, 225, 0.15);
+}
+
+.name-highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(148, 163, 184, 0.1), #cbd5e1, rgba(148, 163, 184, 0.1));
+    box-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
+    transform-origin: left;
+    animation: name-underline 1.2s ease-out both;
+}
+
+@keyframes name-underline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.hero-title-sm {
+    font-size: calc(clamp(1.4rem, 3.5vw, 2.4rem) * 0.5);
+}
