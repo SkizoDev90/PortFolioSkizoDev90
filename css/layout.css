@@ -71,6 +71,7 @@ html, body {
     box-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
     transform-origin: left;
     animation: name-underline 1.2s ease-out both;
+    will-change: transform;
 }
 
 @keyframes name-underline {
