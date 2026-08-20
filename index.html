@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/layout.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <meta name="description" content="Portfolio de Francisco M. Carrillo — Desarrollador Junior Full-Stack y Técnico informático">
+        <meta name="description" data-i18n-meta="meta_desc_index" content="Portfolio de Francisco M. Carrillo — Desarrollador Junior Full-Stack y Técnico informático">
         <title>PortFolio SkizoDev90</title>
     </head>
     <body id="vanta-bg">
@@ -26,13 +26,15 @@
                         <div class="ms-5">
                             <span class="brand-text">SkizoDev90</span>
                         </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" data-i18n-aria="nav_aria">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse flex-grow-0 me-4" id="navbarNav">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">ES</a>
+                                <li class="nav-item d-flex gap-1">
+                                    <a class="nav-link lang-btn active" href="#" data-lang="es" onclick="setLanguage('es')">ES</a>
+                                    <a class="nav-link lang-btn" href="#" data-lang="en" onclick="setLanguage('en')">EN</a>
+                                    <a class="nav-link lang-btn" href="#" data-lang="ca" onclick="setLanguage('ca')">CA</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
@@ -57,9 +59,9 @@
             </header>
             <main class="container-fluid px-3">
                 <div class="w-50 text-white text-center">
-                    <h1 class="hero-title">Hola, soy <span class="name-highlight">Francisco M. Carrillo</span></h1>
-                    <h2 class="hero-title hero-title-sm">Soy Desarrollador Junior Full-Stack</h2>
-                    <h3 class="hero-title hero-title-sm">y Técnico informático</h3>
+                    <h1 class="hero-title"><span data-i18n="index_greeting">Hola, soy</span> <span class="name-highlight">Francisco M. Carrillo</span></h1>
+                    <h2 class="hero-title hero-title-sm" data-i18n="index_role1">Soy Desarrollador Junior Full-Stack</h2>
+                    <h3 class="hero-title hero-title-sm" data-i18n="index_role2">y Técnico informático</h3>
                 </div>
             </main>
             <footer>
@@ -67,5 +69,6 @@
             </footer>
         </div>
         <script src="js/vanta.js"></script>
+        <script defer src="js/i18n.js"></script>
     </body>
 </html>
