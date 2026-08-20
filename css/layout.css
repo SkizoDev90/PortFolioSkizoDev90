@@ -1,9 +1,82 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-card: rgba(15, 23, 42, 0.55);
+    --bg-card-slide: rgba(15, 23, 42, 0.3);
+    --bg-tag: rgba(148, 163, 184, 0.1);
+    --bg-tag-hover: rgba(148, 163, 184, 0.18);
+    --text-primary: #cbd5e1;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-card: rgba(148, 163, 184, 0.25);
+    --border-card-hover: rgba(148, 163, 184, 0.45);
+    --border-tag: rgba(148, 163, 184, 0.2);
+    --border-tag-hover: rgba(148, 163, 184, 0.45);
+    --border-divider: rgba(148, 163, 184, 0.15);
+    --border-img: rgba(148, 163, 184, 0.4);
+    --shadow-card: 0 0 40px rgba(148, 163, 184, 0.15), 0 0 80px rgba(148, 163, 184, 0.06);
+    --shadow-card-hover: 0 0 50px rgba(148, 163, 184, 0.25), 0 0 100px rgba(148, 163, 184, 0.1);
+    --shadow-img: 0 0 45px rgba(148, 163, 184, 0.3), 0 0 80px rgba(148, 163, 184, 0.12);
+    --shadow-tag-hover: 0 0 12px rgba(148, 163, 184, 0.15);
+    --glow-text: 0 0 12px rgba(148, 163, 184, 0.20), 0 0 30px rgba(148, 163, 184, 0.08);
+    --glow-text-sm: 0 0 14px rgba(148, 163, 184, 0.12), 0 0 40px rgba(148, 163, 184, 0.05);
+    --glow-text-strong: 0 0 20px rgba(203, 213, 225, 0.35), 0 0 60px rgba(203, 213, 225, 0.15);
+    --glow-text-hover: 0 0 16px rgba(203, 213, 225, 0.35), 0 0 40px rgba(203, 213, 225, 0.15);
+    --glow-drop: drop-shadow(0 0 6px rgba(148, 163, 184, 0.20));
+    --glow-drop-hover: drop-shadow(0 0 10px rgba(203, 213, 225, 0.4));
+    --underline-gradient: linear-gradient(90deg, rgba(148, 163, 184, 0.1), #cbd5e1, rgba(148, 163, 184, 0.1));
+    --underline-glow: 0 0 12px rgba(203, 213, 225, 0.6);
+    --swiper-btn: rgba(148, 163, 184, 0.7);
+    --swiper-btn-hover: #cbd5e1;
+    --lang-hover-shadow: 0 0 10px rgba(148, 163, 184, 0.3);
+    --lang-active-shadow: 0 0 10px rgba(203, 213, 225, 0.4);
+    --loader-bar-bg: rgba(148, 163, 184, 0.2);
+    --loader-bar-fill: #cbd5e1;
+    --svg-fill: #94a3b8;
+}
+
+body.light {
+    --bg-primary: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.75);
+    --bg-card-slide: rgba(255, 255, 255, 0.5);
+    --bg-tag: rgba(148, 163, 184, 0.12);
+    --bg-tag-hover: rgba(148, 163, 184, 0.22);
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border-card: rgba(148, 163, 184, 0.3);
+    --border-card-hover: rgba(148, 163, 184, 0.5);
+    --border-tag: rgba(148, 163, 184, 0.25);
+    --border-tag-hover: rgba(148, 163, 184, 0.5);
+    --border-divider: rgba(148, 163, 184, 0.2);
+    --border-img: rgba(148, 163, 184, 0.5);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.03);
+    --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 60px rgba(0, 0, 0, 0.05);
+    --shadow-img: 0 0 40px rgba(0, 0, 0, 0.1), 0 0 80px rgba(0, 0, 0, 0.04);
+    --shadow-tag-hover: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --glow-text: none;
+    --glow-text-sm: none;
+    --glow-text-strong: 0 0 20px rgba(100, 116, 139, 0.15), 0 0 60px rgba(100, 116, 139, 0.06);
+    --glow-text-hover: 0 0 8px rgba(100, 116, 139, 0.2), 0 0 30px rgba(100, 116, 139, 0.08);
+    --glow-drop: none;
+    --glow-drop-hover: drop-shadow(0 0 4px rgba(100, 116, 139, 0.3));
+    --underline-gradient: linear-gradient(90deg, rgba(148, 163, 184, 0.2), #475569, rgba(148, 163, 184, 0.2));
+    --underline-glow: 0 0 8px rgba(100, 116, 139, 0.3);
+    --swiper-btn: rgba(71, 85, 105, 0.7);
+    --swiper-btn-hover: #1e293b;
+    --lang-hover-shadow: 0 0 10px rgba(100, 116, 139, 0.2);
+    --lang-active-shadow: 0 0 10px rgba(71, 85, 105, 0.3);
+    --loader-bar-bg: rgba(148, 163, 184, 0.15);
+    --loader-bar-fill: #475569;
+    --svg-fill: #475569;
+}
+
 html, body {
     height: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background: #0f172a;
+    background: var(--bg-primary);
+    transition: background 0.4s ease;
 }
 
 #loading-screen {
@@ -12,7 +85,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0f172a;
+    background: var(--bg-primary);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -29,7 +102,7 @@ html, body {
 
 .loader-text {
     font-family: 'Sekuya', serif;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.8rem;
     letter-spacing: 0.08em;
     animation: loaderPulse 1.5s ease-in-out infinite;
@@ -38,7 +111,7 @@ html, body {
 .loader-bar {
     width: 120px;
     height: 2px;
-    background: rgba(148, 163, 184, 0.2);
+    background: var(--loader-bar-bg);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -48,7 +121,7 @@ html, body {
     display: block;
     width: 40%;
     height: 100%;
-    background: #cbd5e1;
+    background: var(--loader-bar-fill);
     border-radius: 2px;
     animation: loaderSlide 1.2s ease-in-out infinite;
 }
@@ -86,32 +159,32 @@ body.loading #scroll-container {
 
 .brand-text,
 .navbar .nav-link {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.08em;
-    text-shadow: 0 0 12px rgba(148, 163, 184, 0.20), 0 0 30px rgba(148, 163, 184, 0.08);
+    text-shadow: var(--glow-text);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .brand-text:hover,
 .navbar .nav-link:hover {
-    color: #cbd5e1;
-    text-shadow: 0 0 16px rgba(203, 213, 225, 0.35), 0 0 40px rgba(203, 213, 225, 0.15);
+    color: var(--text-primary);
+    text-shadow: var(--glow-text-hover);
 }
 
 .navbar .nav-link svg,
 .navbar .nav-link lord-icon {
     width: 34px;
     height: 34px;
-    fill: #94a3b8;
-    filter: drop-shadow(0 0 6px rgba(148, 163, 184, 0.20));
+    fill: var(--svg-fill);
+    filter: var(--glow-drop);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .nav-link:hover svg,
 .navbar .nav-link:hover lord-icon {
-    filter: drop-shadow(0 0 10px rgba(203, 213, 225, 0.4));
+    filter: var(--glow-drop-hover);
     transform: scale(1.1);
 }
 
@@ -140,21 +213,21 @@ body.loading #scroll-container {
 
 .lang-btn:hover {
     transform: scale(1.15);
-    box-shadow: 0 0 10px rgba(148, 163, 184, 0.3);
+    box-shadow: var(--lang-hover-shadow);
 }
 
 .lang-btn.active {
-    box-shadow: 0 0 10px rgba(203, 213, 225, 0.4);
+    box-shadow: var(--lang-active-shadow);
 }
 
 
 .hero-title {
     font-family: 'Sekuya', serif;
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: clamp(1.4rem, 3.5vw, 2.4rem);
     font-weight: 400;
     letter-spacing: 0.02em;
-    text-shadow: 0 0 14px rgba(148, 163, 184, 0.12), 0 0 40px rgba(148, 163, 184, 0.05);
+    text-shadow: var(--glow-text-sm);
     margin-bottom: 0.6rem;
 }
 
@@ -163,17 +236,17 @@ body.loading #scroll-container {
 }
 
 .hero-title a:hover {
-    color: #cbd5e1;
-    text-shadow: 0 0 16px rgba(203, 213, 225, 0.35), 0 0 40px rgba(203, 213, 225, 0.15);
+    color: var(--text-primary);
+    text-shadow: var(--glow-text-hover);
 }
 
 .name-highlight {
     display: inline-block;
     position: relative;
-    color: #cbd5e1;
+    color: var(--text-primary);
     font-weight: 400;
     font-size: 1.15em;
-    text-shadow: 0 0 20px rgba(203, 213, 225, 0.35), 0 0 60px rgba(203, 213, 225, 0.15);
+    text-shadow: var(--glow-text-strong);
 }
 
 .name-highlight::after {
@@ -184,8 +257,8 @@ body.loading #scroll-container {
     height: 3px;
     width: 100%;
     border-radius: 2px;
-    background: linear-gradient(90deg, rgba(148, 163, 184, 0.1), #cbd5e1, rgba(148, 163, 184, 0.1));
-    box-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
+    background: var(--underline-gradient);
+    box-shadow: var(--underline-glow);
     transform-origin: left;
     animation: name-underline 1.2s ease-out both;
     will-change: transform;
@@ -203,7 +276,7 @@ body.loading #scroll-container {
 #scroll-container > footer {
     text-align: center;
     padding: 1rem;
-    color: #64748b;
+    color: var(--text-muted);
     font-size: 0.8rem;
     letter-spacing: 0.05em;
 }
@@ -239,4 +312,28 @@ body.loading #scroll-container {
         width: 26px;
         height: 26px;
     }
+}
+
+body.light .navbar-dark .navbar-nav .nav-link,
+body.light .navbar-dark .navbar-brand,
+body.light .navbar-dark .navbar-toggler {
+    color: var(--text-secondary) !important;
+}
+
+body.light .navbar {
+    background: rgba(248, 250, 252, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+body.light .navbar-toggler-icon {
+    filter: invert(0.6);
+}
+
+#theme-toggle {
+    cursor: pointer;
+}
+
+.hero-title.text-white {
+    color: var(--text-primary) !important;
 }
