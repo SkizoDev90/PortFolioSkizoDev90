@@ -19,9 +19,10 @@
         <script defer src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/umd/photoswipe.umd.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/umd/photoswipe-lightbox.umd.min.js"></script>
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.3.2/css/flag-icons.min.css">
         <link rel="stylesheet" href="css/proyects.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <meta name="description" content="Proyectos de Francisco M. Carrillo — Desarrollador Junior Full-Stack">
+        <meta name="description" data-i18n-meta="meta_desc_proyect" content="Proyectos de Francisco M. Carrillo — Desarrollador Junior Full-Stack">
         <title>PortFolio SkizoDev90</title>
     </head>
     <body id="vanta-bg">
@@ -32,13 +33,21 @@
                         <div class="ms-5">
                             <span class="brand-text">SkizoDev90</span>
                         </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" data-i18n-aria="nav_aria">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse flex-grow-0 me-4" id="navbarNav">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">ES</a>
+                                <li class="nav-item d-flex gap-2 align-items-center">
+                                    <a class="lang-btn active" href="#" data-lang="es" onclick="setLanguage('es')">
+                                        <span class="fi fis fi-es"></span>
+                                    </a>
+                                    <a class="lang-btn" href="#" data-lang="en" onclick="setLanguage('en')">
+                                        <span class="fi fis fi-gb"></span>
+                                    </a>
+                                    <a class="lang-btn" href="#" data-lang="ca" onclick="setLanguage('ca')">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='2.22' fill='%23DA121A'/%3E%3Crect y='2.22' width='30' height='2.22' fill='%23FCDD09'/%3E%3Crect y='4.44' width='30' height='2.22' fill='%23DA121A'/%3E%3Crect y='6.66' width='30' height='2.22' fill='%23FCDD09'/%3E%3Crect y='8.88' width='30' height='2.22' fill='%23DA121A'/%3E%3Crect y='11.1' width='30' height='2.22' fill='%23FCDD09'/%3E%3Crect y='13.32' width='30' height='2.22' fill='%23DA121A'/%3E%3Crect y='15.54' width='30' height='2.22' fill='%23FCDD09'/%3E%3Crect y='17.76' width='30' height='2.24' fill='%23DA121A'/%3E%3C/svg%3E" alt="Català" class="lang-flag-img">
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
@@ -73,8 +82,8 @@
                                 </div>
                             </div>
                             <div class="box2-proyect">
-                                <span class="proyect-title">Gestión Guardias (Admin)</span>
-                                <p class="proyect-desc">
+                                <span class="proyect-title" data-i18n="proj1_title">Gestión Guardias (Admin)</span>
+                                <p class="proyect-desc" data-i18n="proj1_desc">
                                     Este proyecto fue mi Trabajo de Fin de Grado (TFG), en el que abordamos la
                                     transformación digital de un proceso tradicionalmente tedioso: la gestión de guardias
                                     y ausencias del profesorado. Como se puede observar en el carrusel de imágenes, la
@@ -94,8 +103,8 @@
                                 </div>
                             </div>
                             <div class="box2-proyect">
-                                <span class="proyect-title">Gestión Guardias (App Profesores)</span>
-                                <p class="proyect-desc">
+                                <span class="proyect-title" data-i18n="proj2_title">Gestión Guardias (App Profesores)</span>
+                                <p class="proyect-desc" data-i18n="proj2_desc">
                                     A través de la aplicación, el profesorado puede notificar sus ausencias, adjuntar los
                                     justificantes correspondientes y consultar su horario escolar actualizado, además de
                                     visualizar en tiempo real las guardias y sustituciones que se le hayan asignado cubrir.
@@ -104,7 +113,7 @@
                         </div>
                         <div class="proyect-tech">
                             <div class="tech-group">
-                                <span class="tech-label">Tecnologías</span>
+                                <span class="tech-label" data-i18n="tech_tech">Tecnologías</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">PHP</span>
                                     <span class="tech-tag">MySQL</span>
@@ -115,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Librerías y Frameworks</span>
+                                <span class="tech-label" data-i18n="tech_libs_fw">Librerías y Frameworks</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Bootstrap</span>
                                     <span class="tech-tag">jQuery</span>
@@ -128,7 +137,7 @@
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Herramientas</span>
+                                <span class="tech-label" data-i18n="tech_tools">Herramientas</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">VS Code</span>
                                     <span class="tech-tag">Git</span>
@@ -148,8 +157,8 @@
                                 </div>
                             </div>
                             <div class="box2-proyect">
-                                <span class="proyect-title">Proyecto Medioambiental</span>
-                                <p class="proyect-desc">
+                                <span class="proyect-title" data-i18n="proj3_title">Proyecto Medioambiental</span>
+                                <p class="proyect-desc" data-i18n="proj3_desc">
                                     Proyecto desarrollado junto a THB Hotels consistente en un software web para la auditoría energética de hoteles 
                                     mediante inteligencia artificial. La herramienta centraliza datos de suministros y gestiona el uso eficiente de modelos de IA 
                                     para ofrecer análisis evolutivos del desempeño medioambiental.
@@ -158,7 +167,7 @@
                         </div>
                         <div class="proyect-tech">
                             <div class="tech-group">
-                                <span class="tech-label">Lenguajes y Tecnologías</span>
+                                <span class="tech-label" data-i18n="tech_lang_tech">Lenguajes y Tecnologías</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">PHP</span>
                                     <span class="tech-tag">MySQL</span>
@@ -168,14 +177,14 @@
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Frameworks</span>
+                                <span class="tech-label" data-i18n="tech_frameworks">Frameworks</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">Laravel 12.x</span>
                                     <span class="tech-tag">Bootstrap</span>
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Librerías</span>
+                                <span class="tech-label" data-i18n="tech_libs">Librerías</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">jQuery</span>
                                     <span class="tech-tag">FullCalendar</span>
@@ -187,7 +196,7 @@
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Herramientas y Servidor</span>
+                                <span class="tech-label" data-i18n="tech_tools_server">Herramientas y Servidor</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">VS Code</span>
                                     <span class="tech-tag">Git</span>
@@ -207,8 +216,8 @@
                                 </div>
                             </div>
                             <div class="box2-proyect">
-                                <span class="proyect-title">Asociaciondle (Admin)</span>
-                                <p class="proyect-desc">
+                                <span class="proyect-title" data-i18n="proj4_title">Asociaciondle (Admin)</span>
+                                <p class="proyect-desc" data-i18n="proj4_desc">
                                     Este proyecto para el instituto consiste en un juego, al estilo de otros como Wordle, mediante el cual podemos dar a conocer múltiples asociaciones
                                     y organizaciones humanitarias (tanto las más conocidas como aquellas que no sabíamos ni que existían). En el panel de administración se gestiona todo
                                     el juego: allí podemos ver las visitas, añadir más asociaciones con sus respectivas categorías, configurar las pistas y administrar los demás ajustes.
@@ -224,8 +233,8 @@
                                 </div>
                             </div>
                             <div class="box2-proyect">
-                                <span class="proyect-title">Asociaciondle (Juego)</span>
-                                <p class="proyect-desc">
+                                <span class="proyect-title" data-i18n="proj5_title">Asociaciondle (Juego)</span>
+                                <p class="proyect-desc" data-i18n="proj5_desc">
                                     En esta sección, los usuarios podrán jugar y dispondrán de pistas, así como de información para entender el funcionamiento del juego. También contarán con un
                                     ranking de las partidas y, al acertar y descubrir la asociación, podrán ver imágenes representativas junto con la información detallada de la organización.
                                 </p>
@@ -233,7 +242,7 @@
                         </div>
                         <div class="proyect-tech">
                             <div class="tech-group">
-                                <span class="tech-label">Tecnologías</span>
+                                <span class="tech-label" data-i18n="tech_tech">Tecnologías</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">PHP</span>
                                     <span class="tech-tag">MySQL</span>
@@ -243,7 +252,7 @@
                                 </div>
                             </div>
                             <div class="tech-group">
-                                <span class="tech-label">Herramientas</span>
+                                <span class="tech-label" data-i18n="tech_tools">Herramientas</span>
                                 <div class="tech-tags">
                                     <span class="tech-tag">VS Code</span>
                                     <span class="tech-tag">Git</span>
@@ -260,5 +269,6 @@
         </div>
         <script src="js/vanta.js"></script>
         <script src="js/proyects.js"></script>
+        <script defer src="js/i18n.js"></script>
     </body>
 </html>
