@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,19 @@
         <link rel="preconnect" href="https://cdn.lordicon.com">
         <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/layout.css">
-        <title>PortFolio SkizoDev90</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body id="vanta-bg">
         <div id="scroll-container">
-            <div id="topDiv" class="w-100" style="height: 10%"></div>
             <header class="sticky-top">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid d-flex justify-content-between">
                         <div class="ms-5">
                             <span class="brand-text">SkizoDev90</span>
                         </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                         <div class="collapse navbar-collapse flex-grow-0 me-4" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
@@ -51,58 +53,60 @@
                     </div>
                 </nav>
             </header>
-            <main class="container-fluid py-3 px-3">
-                <div class="d-flex justify-content-center align-items-center min-vh-100 w-75 mx-auto hero-title">
-                    <div class="w-50 h-25 text-white mx-auto" style="margin-bottom: 32vh;">
-                        <a href="./" class="text-white text-decoration-none">
+            <main class="container-fluid px-3">
+                <div class="d-flex align-items-center gap-5 hero-title">
+                    <div class="text-center">
+                        <a href="./" class="text-decoration-none">
                             <h1 class="d-flex align-items-center justify-content-center gap-2">
                                 <lord-icon
                                     src="https://cdn.lordicon.com/zllgguxq.json"
                                     trigger="hover"
-                                    colors="primary:#ffffff"
+                                    colors="primary:#94a3b8"
                                     style="width:50px;height:50px">
                                 </lord-icon>
                                 <span>Principal</span>
                             </h1>
                         </a>
-                        <a href="about.html" class="text-white text-decoration-none">
+                        <a href="about.html" class="text-decoration-none">
                             <h1 class="d-flex align-items-center justify-content-center gap-2">
                                 <lord-icon
                                     src="https://cdn.lordicon.com/zllgguxq.json"
                                     trigger="hover"
-                                    colors="primary:#ffffff"
+                                    colors="primary:#94a3b8"
                                     style="width:50px;height:50px">
                                 </lord-icon>
-                                <span>Sobre mi</span>
+                                <span>Sobre mí</span>
                             </h1>
                         </a>
                     </div>
-                    <div class="w-50 h-25 text-white mx-auto" style="margin-bottom: 32vh;">
-                        <a href="proyect.html" class="text-white text-decoration-none">
+                    <div class="text-center">
+                        <a href="proyect.html" class="text-decoration-none">
                             <h1 class="d-flex align-items-center justify-content-center gap-2">
                                 <lord-icon
                                     src="https://cdn.lordicon.com/zllgguxq.json"
                                     trigger="hover"
-                                    colors="primary:#ffffff"
+                                    colors="primary:#94a3b8"
                                     style="width:50px;height:50px">
                                 </lord-icon>
                                 <span>Mis Proyectos</span>
                             </h1>
                         </a>
-                        <h1 class="d-flex align-items-center justify-content-center gap-2">
-                            <lord-icon
-                                src="https://cdn.lordicon.com/zllgguxq.json"
-                                trigger="hover"
-                                colors="primary:#ffffff"
-                                style="width:50px;height:50px">
-                            </lord-icon>
-                            <span>Contacto</span>
-                        </h1>
+                        <a href="#" class="text-decoration-none">
+                            <h1 class="d-flex align-items-center justify-content-center gap-2">
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/zllgguxq.json"
+                                    trigger="hover"
+                                    colors="primary:#94a3b8"
+                                    style="width:50px;height:50px">
+                                </lord-icon>
+                                <span>Contacto</span>
+                            </h1>
+                        </a>
                     </div>
                 </div>
             </main>
             <footer>
-
+                <p>&copy; 2025 SkizoDev90 — Francisco M. Carrillo</p>
             </footer>
         </div>
         <script src="js/vanta.js"></script>

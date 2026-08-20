@@ -1,3 +1,10 @@
+#scroll-container > main {
+    flex: none;
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+}
+
 #content-proyects{
     padding: 2rem;
     max-width: 90%;
