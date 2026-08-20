@@ -7,6 +7,16 @@ html, body {
 #scroll-container {
     height: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#scroll-container > main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
 }
 
 .brand-text,
@@ -40,6 +50,7 @@ html, body {
     transform: scale(1.1);
 }
 
+
 .hero-title {
     font-family: 'Sekuya', serif;
     color: #94a3b8;
@@ -48,6 +59,15 @@ html, body {
     letter-spacing: 0.02em;
     text-shadow: 0 0 14px rgba(148, 163, 184, 0.12), 0 0 40px rgba(148, 163, 184, 0.05);
     margin-bottom: 0.6rem;
+}
+
+.hero-title a {
+    color: inherit;
+}
+
+.hero-title a:hover {
+    color: #cbd5e1;
+    text-shadow: 0 0 16px rgba(203, 213, 225, 0.35), 0 0 40px rgba(203, 213, 225, 0.15);
 }
 
 .name-highlight {
@@ -71,6 +91,7 @@ html, body {
     box-shadow: 0 0 12px rgba(203, 213, 225, 0.6);
     transform-origin: left;
     animation: name-underline 1.2s ease-out both;
+    will-change: transform;
 }
 
 @keyframes name-underline {
@@ -80,4 +101,36 @@ html, body {
 
 .hero-title-sm {
     font-size: calc(clamp(1.4rem, 3.5vw, 2.4rem) * 0.5);
+}
+
+#scroll-container > footer {
+    text-align: center;
+    padding: 1rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    #scroll-container > main {
+        flex: none;
+        display: block;
+        padding-top: 2rem;
+    }
+
+    #scroll-container > main .d-flex.gap-5 {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+
+    .brand-text,
+    .navbar .nav-link {
+        font-size: 1.1rem;
+    }
+
+    .navbar .nav-link svg,
+    .navbar .nav-link lord-icon {
+        width: 26px;
+        height: 26px;
+    }
 }

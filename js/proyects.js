@@ -1,66 +1,57 @@
 document.addEventListener('DOMContentLoaded',()=>{
     const carruselGuardiaAdmin = [
-        'img/sustituciones-admin/dashboard.png',
-        'img/sustituciones-admin/cuadrante.png',
-        'img/sustituciones-admin/gestionAus.png',
-        'img/sustituciones-admin/calendar.png',
-        'img/sustituciones-admin/historial.png',
-        'img/sustituciones-admin/detalleAu.png',
-        'img/sustituciones-admin/gestionEven.png',
-        'img/sustituciones-admin/gestionProf.png',
-        'img/sustituciones-admin/gestionGrup.png',
+        'img/sustituciones-admin/dashboard.webp',
+        'img/sustituciones-admin/cuadrante.webp',
+        'img/sustituciones-admin/gestionAus.webp',
+        'img/sustituciones-admin/calendar.webp',
+        'img/sustituciones-admin/historial.webp',
+        'img/sustituciones-admin/detalleAu.webp',
+        'img/sustituciones-admin/gestionEven.webp',
+        'img/sustituciones-admin/gestionProf.webp',
+        'img/sustituciones-admin/gestionGrup.webp',
     ]
 
     const carruselGuardiaApp = [
-        'img/sustituciones-profesor/inicio.png',
-        'img/sustituciones-profesor/misGuar.png',
-        'img/sustituciones-profesor/horario.png',
-        'img/sustituciones-profesor/misAus.png',
-        'img/sustituciones-profesor/notifica.png',
+        'img/sustituciones-profesor/inicio.webp',
+        'img/sustituciones-profesor/misGuar.webp',
+        'img/sustituciones-profesor/horario.webp',
+        'img/sustituciones-profesor/misAus.webp',
+        'img/sustituciones-profesor/notifica.webp',
     ]
 
     const carruselEnviromental = [
-        'img/Enviromental/0.png',
-        'img/Enviromental/1.png',
-        'img/Enviromental/2.png',
-        'img/Enviromental/3.png',
-        'img/Enviromental/4.png',
-        'img/Enviromental/5.png',
-        'img/Enviromental/6.png',
-        'img/Enviromental/7.png',
-        'img/Enviromental/8.png'
+        'img/Enviromental/vistaNoDisponible.jpeg',
     ]
     const carruselAsocAdmin = [
-        'img/asociaciondle-Admin/login.png',
-        'img/asociaciondle-Admin/dashboard.png',
-        'img/asociaciondle-Admin/asociaciones.png',
-        'img/asociaciondle-Admin/categoriasAdmin.png',
-        'img/asociaciondle-Admin/contribucionesAdmin.png',
-        'img/asociaciondle-Admin/galeria.png',
-        'img/asociaciondle-Admin/usuarios.png',
-        'img/asociaciondle-Admin/cambio.png'
+        'img/asociaciondle-Admin/login.webp',
+        'img/asociaciondle-Admin/dashboard.webp',
+        'img/asociaciondle-Admin/asociaciones.webp',
+        'img/asociaciondle-Admin/categoriasAdmin.webp',
+        'img/asociaciondle-Admin/contribucionesAdmin.webp',
+        'img/asociaciondle-Admin/galeria.webp',
+        'img/asociaciondle-Admin/usuarios.webp',
+        'img/asociaciondle-Admin/cambio.webp'
     ]
     const carruselAsocUser = [
-        'img/asociaciondle-User/principal.png',
-        'img/asociaciondle-User/info.png',
-        'img/asociaciondle-User/pistas.png',
-        'img/asociaciondle-User/juego.png',
-        'img/asociaciondle-User/coleccion.png',
-        'img/asociaciondle-User/ranking.png',
-        'img/asociaciondle-User/cambioUser.png'
+        'img/asociaciondle-User/principal.webp',
+        'img/asociaciondle-User/info.webp',
+        'img/asociaciondle-User/pistas.webp',
+        'img/asociaciondle-User/juego.webp',
+        'img/asociaciondle-User/coleccion.webp',
+        'img/asociaciondle-User/ranking.webp',
+        'img/asociaciondle-User/cambioUser.webp'
     ]
 
     function initCarrusel(rutas, trackId){
         const track = document.getElementById(trackId);
-        rutas.forEach((ruta) => {
-            track.innerHTML += `
-                <div class="swiper-slide">
-                    <a href="${ruta}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
-                        <img class="imgCarrusel" src="${ruta}" alt="Captura">
-                    </a>
-                </div>
-            `;
-        });
+        const html = rutas.map(ruta => `
+            <div class="swiper-slide">
+                <a href="${ruta}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
+                    <img class="imgCarrusel" src="${ruta}" alt="Captura" width="1920" height="1080" loading="lazy">
+                </a>
+            </div>
+        `).join('');
+        track.innerHTML = html;
     }
 
     function initLightbox(gallerySelector){

@@ -1,5 +1,4 @@
 #contentAbout{
-    position: relative;
     padding: 2rem;
 }
 
@@ -84,6 +83,8 @@
         text-align: center;
         padding: 2rem;
         gap: 2rem;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     #aboutImg {
