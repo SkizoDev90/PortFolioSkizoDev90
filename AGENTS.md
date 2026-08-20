@@ -20,7 +20,7 @@ Static HTML/CSS/JS personal portfolio site. No build system, no package manager,
 
 ## Key libraries (all CDN, no npm)
 
-- Bootstrap 5.3.8 (CSS only)
+- Bootstrap 5.3.8 (CSS + JS bundle)
 - Three.js r121 (required by Vanta)
 - Vanta.NET (animated background)
 - Swiper 11 (carousels on projects page)
@@ -33,9 +33,13 @@ Static HTML/CSS/JS personal portfolio site. No build system, no package manager,
 - **No build step.** CSS/JS are loaded raw via `<link>` and `<script>` tags. Edits to `css/` or `js/` are visible on browser refresh only.
 - **CDN-pinned by URL version, not lockfile.** Vanta uses `@latest` — behavior may change upstream. Other libs pin major versions.
 - **Each page loads the full `<head>` block** — the CDN script/link list is duplicated across all 4 HTML files. If you add or update a dependency, update every HTML file.
+- **Bootstrap JS bundle is required** — all pages load `bootstrap.bundle.min.js` for the navbar toggler. If you remove it, mobile navigation breaks.
 - **`proyects.js` hardcodes image paths** in arrays (`carruselGuardiaAdmin`, etc.) and Swiper CSS-class selectors. Adding a new project requires updating both `proyect.html` (new carousel DOM) and `proyects.js` (new image array + `initCarrusel` + `initLightbox` + `new Swiper` calls).
+- **Centering pattern:** `#scroll-container` is a flex column. `#scroll-container > main` has `flex: 1; display: flex; align-items: center; justify-content: center`. This centers content in the remaining viewport space after the header. **`proyects.css` overrides this** (`flex: none; display: block`) because projects need to scroll, not center.
 - **`layout.css` sets `overflow: hidden` on `html, body`** and uses `#scroll-container` for scroll. This is intentional (Vanta background stays fixed). Do not remove this pattern.
-- **Language is Spanish.** All user-facing text, project descriptions, and page labels are in Spanish. Maintain consistency.
+- **Language is Spanish.** `lang="es"` on all pages. All user-facing text, project descriptions, and page labels are in Spanish. Maintain consistency.
+- **Navbar hamburger:** All pages include `navbar-toggler` + Bootstrap collapse for mobile. The toggler targets `#navbarNav`.
+- **Responsive:** `@media (max-width: 768px)` in `layout.css` disables flex centering on main and stacks menu items vertically.
 
 ## To preview locally
 
