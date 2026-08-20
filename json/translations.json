@@ -31,7 +31,10 @@
         "tech_lang_tech": "Lenguajes y Tecnologías",
         "tech_frameworks": "Frameworks",
         "tech_libs": "Librerías",
-        "tech_tools_server": "Herramientas y Servidor"
+        "tech_tools_server": "Herramientas y Servidor",
+        "meta_desc_contact": "Contacto de Francisco M. Carrillo — Desarrollador Junior Full-Stack",
+        "contact_title": "¡Listo para el siguiente paso!",
+        "contact_bio": "Acabo de graduarme y estoy listo para dar el salto al mundo profesional. Busco mi primera oportunidad a tiempo completo o proyectos freelance donde poner en práctica todo lo aprendido, seguir creciendo y aportar ideas frescas desde el primer día. Si buscas a alguien motivado, con la teoría al día y con ganas de aprender rápido, ¡ponte en contacto conmigo!"
     },
     "en": {
         "nav_aria": "Navigation",
@@ -65,7 +68,10 @@
         "tech_lang_tech": "Languages & Technologies",
         "tech_frameworks": "Frameworks",
         "tech_libs": "Libraries",
-        "tech_tools_server": "Tools & Server"
+        "tech_tools_server": "Tools & Server",
+        "meta_desc_contact": "Contact Francisco M. Carrillo — Junior Full-Stack Developer",
+        "contact_title": "Ready for the next step!",
+        "contact_bio": "I just graduated and I'm ready to take the leap into the professional world. I'm looking for my first full-time opportunity or freelance projects where I can put into practice everything I've learned, keep growing, and bring fresh ideas from day one. If you're looking for someone motivated, up-to-date on theory and eager to learn fast, get in touch!"
     },
     "ca": {
         "nav_aria": "Navegació",
@@ -99,6 +105,9 @@
         "tech_lang_tech": "Llenguatges i Tecnologies",
         "tech_frameworks": "Frameworks",
         "tech_libs": "Biblioteques",
-        "tech_tools_server": "Eines i Servidor"
+        "tech_tools_server": "Eines i Servidor",
+        "meta_desc_contact": "Contacte de Francisco M. Carrillo — Desenvolupador Junior Full-Stack",
+        "contact_title": "Preparet per al següent pas!",
+        "contact_bio": "Acabo de graduar-me i estic preparat per fer el salt al món professional. Busco la meva primera oportunitat a temps complet o projectes freelance on posar en pràctica tot el que he après, seguir creixent i aportar idees fresques des del primer dia. Si busques algú motivat, amb la teoria al dia i amb ganes d'aprendre ràpid, posa't en contacte amb mi!"
     }
 }
