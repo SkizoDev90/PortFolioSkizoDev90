@@ -11,24 +11,32 @@
 
 ## Portfolio Web Personal
 
-Sitio web estático con diseño dark y animaciones interactivas. Incluye presentación personal, proyectos destacados con carruseles de imágenes y lightbox para ver capturas en pantalla completa.
+Sitio web estático con diseño dark y animaciones interactivas. Incluye presentación personal, proyectos destacados con carruseles de imágenes y lightbox para ver capturas en pantalla completa. Disponible en español, inglés y catalán.
 
 ### Estructura
 
 ```
 .
-├── index.html          # Página principal con fondo Vanta.NET
-├── menu.html           # Navegación entre secciones
-├── about.html          # Sobre mí + descarga de CV
-├── proyect.html        # Showcase de proyectos con carruseles
+├── index.html              # Página principal con fondo Vanta.NET
+├── views/
+│   ├── menu.html           # Navegación entre secciones
+│   ├── about.html          # Sobre mí + descarga de CV
+│   ├── proyect.html        # Showcase de proyectos con carruseles
+│   └── contact.html        # Contacto y redes sociales
 ├── css/
-│   ├── layout.css      # Estilos compartidos + fondo animado
-│   ├── proyects.css    # Estilos del carrusel y tarjetas de proyecto
-│   └── about.css       # Estilos de la sección "Sobre mí"
+│   ├── layout.css          # Estilos compartidos + fondo animado
+│   ├── proyects.css        # Estilos del carrusel y tarjetas de proyecto
+│   └── about.css           # Estilos de la sección "Sobre mí"
 ├── js/
-│   ├── vanta.js        # Configuración del fondo animado Vanta.NET
-│   └── proyects.js     # Carruseles Swiper + lightbox PhotoSwipe
-├── img/                # Capturas de proyectos
+│   ├── theme.js            # Tema claro / oscuro
+│   ├── animations.js       # Animaciones de entrada
+│   ├── particles.js        # Partículas al hacer clic
+│   ├── vanta.js            # Configuración del fondo animado Vanta.NET
+│   ├── proyects.js         # Carruseles Swiper + lightbox PhotoSwipe
+│   └── i18n.js             # Motor de traducciones ES / EN / CA
+├── json/
+│   └── translations.json   # Textos traducidos ES / EN / CA
+├── img/                    # Capturas de proyectos y foto de perfil
 └── files/
     └── CV_Francisco-Carrillo_IT.pdf
 ```
