@@ -68,6 +68,7 @@ body.light {
     --loader-bar-bg: rgba(148, 163, 184, 0.15);
     --loader-bar-fill: #475569;
     --svg-fill: #475569;
+    --bg-navbar: rgba(248, 250, 252, 0.85);
 }
 
 html, body {
@@ -76,7 +77,6 @@ html, body {
     margin: 0;
     padding: 0;
     background: var(--bg-primary);
-    transition: background 0.4s ease;
 }
 
 #loading-screen {
@@ -101,7 +101,7 @@ html, body {
 }
 
 .loader-text {
-    font-family: 'Sekuya', serif;
+    font-family: 'Bungee Shade', cursive;
     color: var(--text-secondary);
     font-size: 1.8rem;
     letter-spacing: 0.08em;
@@ -157,7 +157,19 @@ body.loading #scroll-container {
     min-height: 0;
 }
 
-.brand-text,
+.brand-text {
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.brand-text:hover {
+    color: var(--text-primary);
+}
+
 .navbar .nav-link {
     color: var(--text-secondary);
     font-weight: 600;
@@ -167,10 +179,22 @@ body.loading #scroll-container {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.brand-text:hover,
 .navbar .nav-link:hover {
     color: var(--text-primary);
     text-shadow: var(--glow-text-hover);
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .navbar .nav-link svg,
@@ -197,11 +221,6 @@ body.loading #scroll-container {
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lang-btn .fi {
-    font-size: 1.5rem;
-    line-height: 1;
 }
 
 .lang-flag-img {
@@ -269,6 +288,22 @@ body.loading #scroll-container {
     to { transform: scaleX(1); }
 }
 
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.drop-in {
+    opacity: 0;
+    animation: dropIn 0.6s ease-out forwards;
+}
+
 .hero-title-sm {
     font-size: calc(clamp(1.4rem, 3.5vw, 2.4rem) * 0.5);
 }
@@ -293,7 +328,10 @@ body.loading #scroll-container {
         gap: 1rem !important;
     }
 
-    .brand-text,
+    .brand-text {
+        font-size: 1.1rem;
+    }
+
     .navbar .nav-link {
         font-size: 1.1rem;
     }
@@ -301,10 +339,6 @@ body.loading #scroll-container {
     .lang-btn {
         width: 24px;
         height: 24px;
-    }
-
-    .lang-btn .fi {
-        font-size: 1.3rem;
     }
 
     .navbar .nav-link svg,
@@ -315,13 +349,12 @@ body.loading #scroll-container {
 }
 
 body.light .navbar-dark .navbar-nav .nav-link,
-body.light .navbar-dark .navbar-brand,
 body.light .navbar-dark .navbar-toggler {
     color: var(--text-secondary) !important;
 }
 
 body.light .navbar {
-    background: rgba(248, 250, 252, 0.85);
+    background: var(--bg-navbar);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -332,8 +365,47 @@ body.light .navbar-toggler-icon {
 
 #theme-toggle {
     cursor: pointer;
+    position: relative;
 }
 
-.hero-title.text-white {
-    color: var(--text-primary) !important;
+.icon-dark {
+    display: inline;
+}
+
+.icon-light {
+    display: none;
+}
+
+body.light .icon-dark {
+    display: none;
+}
+
+body.light .icon-light {
+    display: inline;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    vertical-align: middle;
+}
+
+.click-particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: particleFly 0.6s ease-out forwards;
+}
+
+@keyframes particleFly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0);
+    }
 }

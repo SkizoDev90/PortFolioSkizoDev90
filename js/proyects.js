@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     function initCarrusel(rutas, trackId){
         const track = document.getElementById(trackId);
+        if (!track) return;
         const html = rutas.map(ruta => `
             <div class="swiper-slide">
                 <a href="${ruta}" data-pswp-width="1920" data-pswp-height="1080" target="_blank">
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
     function initLightbox(gallerySelector){
+        if (!document.querySelector(gallerySelector)) return;
         const lightbox = new PhotoSwipeLightbox({
             gallery: gallerySelector,
             children: 'a',
