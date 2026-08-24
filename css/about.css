@@ -1,5 +1,5 @@
 #contentAbout{
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 #aboutCard{
@@ -11,7 +11,8 @@
     box-shadow: var(--shadow-card);
     padding: 3rem;
     gap: 3rem;
-    max-width: 85%;
+    max-width: 90rem;
+    margin-inline: auto;
 }
 
 #aboutImg{
@@ -77,6 +78,21 @@
     text-shadow: var(--glow-text-hover);
 }
 
+.aboutSocial {
+    gap: 3rem;
+}
+
+@media (max-width: 991.98px) {
+    #aboutCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #aboutImg {
+        height: 38vh;
+    }
+}
+
 @media (max-width: 768px) {
     #aboutCard {
         flex-direction: column;
@@ -93,5 +109,24 @@
 
     .aboutCv {
         justify-content: center;
+    }
+
+    #contentAbout {
+        padding: 0;
+    }
+
+    #aboutCard {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .aboutSocial {
+        gap: 1.25rem;
+    }
+
+    .aboutSocial img {
+        width: 56px;
+        height: 56px;
     }
 }
