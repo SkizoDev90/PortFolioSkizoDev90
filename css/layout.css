@@ -239,6 +239,10 @@ body.loading #scroll-container {
     box-shadow: var(--lang-active-shadow);
 }
 
+.hero-content {
+    width: 50%;
+    color: var(--text-primary);
+}
 
 .hero-title {
     font-family: 'Sekuya', serif;
@@ -309,6 +313,7 @@ body.loading #scroll-container {
 }
 
 #scroll-container > footer {
+    margin-top: auto;
     text-align: center;
     padding: 1rem;
     color: var(--text-muted);
@@ -345,6 +350,30 @@ body.loading #scroll-container {
     .navbar .nav-link lord-icon {
         width: 26px;
         height: 26px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(1.9rem, 9vw, 2.4rem);
+    }
+
+    .hero-title-sm {
+        font-size: clamp(1rem, 4.5vw, 1.2rem);
+    }
+
+    #scroll-container > main.v-center {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        min-height: 0;
+        padding-top: 0;
+    }
+
+    #scroll-container > main.v-center > * {
+        margin-block: auto;
     }
 }
 
@@ -387,6 +416,16 @@ body.light .icon-light {
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     vertical-align: middle;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
 }
 
 .click-particle {

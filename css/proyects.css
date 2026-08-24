@@ -6,9 +6,9 @@
 }
 
 #content-proyects{
-    padding: 2rem;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 100rem;
+    margin-inline: auto;
+    padding: 1rem 0;
 }
 
 .proyect{
