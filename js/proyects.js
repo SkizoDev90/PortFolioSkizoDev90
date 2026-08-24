@@ -1,45 +1,45 @@
 document.addEventListener('DOMContentLoaded',()=>{
     const carruselGuardiaAdmin = [
-        'img/sustituciones-admin/dashboard.webp',
-        'img/sustituciones-admin/cuadrante.webp',
-        'img/sustituciones-admin/gestionAus.webp',
-        'img/sustituciones-admin/calendar.webp',
-        'img/sustituciones-admin/historial.webp',
-        'img/sustituciones-admin/detalleAu.webp',
-        'img/sustituciones-admin/gestionEven.webp',
-        'img/sustituciones-admin/gestionProf.webp',
-        'img/sustituciones-admin/gestionGrup.webp',
+        '../img/sustituciones-admin/dashboard.webp',
+        '../img/sustituciones-admin/cuadrante.webp',
+        '../img/sustituciones-admin/gestionAus.webp',
+        '../img/sustituciones-admin/calendar.webp',
+        '../img/sustituciones-admin/historial.webp',
+        '../img/sustituciones-admin/detalleAu.webp',
+        '../img/sustituciones-admin/gestionEven.webp',
+        '../img/sustituciones-admin/gestionProf.webp',
+        '../img/sustituciones-admin/gestionGrup.webp',
     ]
 
     const carruselGuardiaApp = [
-        'img/sustituciones-profesor/inicio.webp',
-        'img/sustituciones-profesor/misGuar.webp',
-        'img/sustituciones-profesor/horario.webp',
-        'img/sustituciones-profesor/misAus.webp',
-        'img/sustituciones-profesor/notifica.webp',
+        '../img/sustituciones-profesor/inicio.webp',
+        '../img/sustituciones-profesor/misGuar.webp',
+        '../img/sustituciones-profesor/horario.webp',
+        '../img/sustituciones-profesor/misAus.webp',
+        '../img/sustituciones-profesor/notifica.webp',
     ]
 
     const carruselEnviromental = [
-        'img/Enviromental/vistaNoDisponible.jpeg',
+        '../img/Enviromental/vistaNoDisponible.jpeg',
     ]
     const carruselAsocAdmin = [
-        'img/asociaciondle-Admin/login.webp',
-        'img/asociaciondle-Admin/dashboard.webp',
-        'img/asociaciondle-Admin/asociaciones.webp',
-        'img/asociaciondle-Admin/categoriasAdmin.webp',
-        'img/asociaciondle-Admin/contribucionesAdmin.webp',
-        'img/asociaciondle-Admin/galeria.webp',
-        'img/asociaciondle-Admin/usuarios.webp',
-        'img/asociaciondle-Admin/cambio.webp'
+        '../img/asociaciondle-Admin/login.webp',
+        '../img/asociaciondle-Admin/dashboard.webp',
+        '../img/asociaciondle-Admin/asociaciones.webp',
+        '../img/asociaciondle-Admin/categoriasAdmin.webp',
+        '../img/asociaciondle-Admin/contribucionesAdmin.webp',
+        '../img/asociaciondle-Admin/galeria.webp',
+        '../img/asociaciondle-Admin/usuarios.webp',
+        '../img/asociaciondle-Admin/cambio.webp'
     ]
     const carruselAsocUser = [
-        'img/asociaciondle-User/principal.webp',
-        'img/asociaciondle-User/info.webp',
-        'img/asociaciondle-User/pistas.webp',
-        'img/asociaciondle-User/juego.webp',
-        'img/asociaciondle-User/coleccion.webp',
-        'img/asociaciondle-User/ranking.webp',
-        'img/asociaciondle-User/cambioUser.webp'
+        '../img/asociaciondle-User/principal.webp',
+        '../img/asociaciondle-User/info.webp',
+        '../img/asociaciondle-User/pistas.webp',
+        '../img/asociaciondle-User/juego.webp',
+        '../img/asociaciondle-User/coleccion.webp',
+        '../img/asociaciondle-User/ranking.webp',
+        '../img/asociaciondle-User/cambioUser.webp'
     ]
 
     function initCarrusel(rutas, trackId){

@@ -14,7 +14,7 @@
 
     async function loadTranslations(lang) {
         try {
-            const response = await fetch('json/translations.json');
+            const response = await fetch((window.location.pathname.includes('/views/') ? '../' : '') + 'json/translations.json');
             const data = await response.json();
             return data[lang] || data[DEFAULT_LANG];
         } catch (e) {

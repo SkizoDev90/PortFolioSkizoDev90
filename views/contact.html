@@ -13,10 +13,11 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
         <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
-        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/about.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <meta name="description" content="Menú de navegación — PortFolio SkizoDev90">
-        <title>PortFolio SkizoDev90 — Menú</title>
+        <meta name="description" data-i18n-meta="meta_desc_contact" content="Contacto de Francisco M. Carrillo — Desarrollador Junior Full-Stack">
+        <title>PortFolio SkizoDev90</title>
     </head>
     <body id="vanta-bg" class="loading">
         <div id="loading-screen">
@@ -67,54 +68,35 @@
                 </nav>
             </header>
             <main class="container-fluid px-3 v-center">
-                <div class="d-flex align-items-center gap-5 hero-title">
-                    <div class="text-center">
-                        <a href="./" class="text-decoration-none">
-                            <h1 class="d-flex align-items-center justify-content-center gap-2">
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/zllgguxq.json"
-                                    trigger="hover"
-                                    colors="primary:#94a3b8"
-                                    style="width:50px;height:50px">
-                                </lord-icon>
-                                <span data-i18n="menu_home">Principal</span>
-                            </h1>
-                        </a>
-                        <a href="about.html" class="text-decoration-none">
-                            <h1 class="d-flex align-items-center justify-content-center gap-2">
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/zllgguxq.json"
-                                    trigger="hover"
-                                    colors="primary:#94a3b8"
-                                    style="width:50px;height:50px">
-                                </lord-icon>
-                                <span data-i18n="menu_about">Sobre mí</span>
-                            </h1>
-                        </a>
-                    </div>
-                    <div class="text-center">
-                        <a href="proyect.html" class="text-decoration-none">
-                            <h1 class="d-flex align-items-center justify-content-center gap-2">
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/zllgguxq.json"
-                                    trigger="hover"
-                                    colors="primary:#94a3b8"
-                                    style="width:50px;height:50px">
-                                </lord-icon>
-                                <span data-i18n="menu_projects">Mis Proyectos</span>
-                            </h1>
-                        </a>
-                        <a href="contact.html" class="text-decoration-none">
-                            <h1 class="d-flex align-items-center justify-content-center gap-2">
-                                <lord-icon
-                                    src="https://cdn.lordicon.com/zllgguxq.json"
-                                    trigger="hover"
-                                    colors="primary:#94a3b8"
-                                    style="width:50px;height:50px">
-                                </lord-icon>
-                                <span data-i18n="menu_contact">Contacto</span>
-                            </h1>
-                        </a>
+                <div id="contentAbout" class="w-100 d-flex align-items-center justify-content-center">
+                    <div id="aboutCard" class="d-flex align-items-center">
+                        <div id="aboutText" class="d-flex align-items-center">
+                            <div id="aboutBox">
+                                <div class="aboutTitle">
+                                    <p data-i18n="contact_title">¡Listo para el siguiente paso!</p>
+                                </div>
+                                <div class="aboutBio">
+                                    <p data-i18n="contact_bio">Acabo de graduarme y estoy listo para dar el salto al mundo profesional. Busco mi primera oportunidad a tiempo completo o 
+                                        proyectos freelance donde poner en práctica todo lo aprendido, seguir creciendo y aportar ideas frescas desde el primer día.
+                                        Si buscas a alguien motivado, con la teoría al día y con ganas de aprender rápido, ¡ponte en contacto conmigo!
+                                    </p>
+                                </div>
+                                <div class="aboutSocial d-flex justify-content-center">
+                                    <a href="https://www.linkedin.com/in/francisco-carrillo-fern%C3%A1ndez-983029415" target="_blank">
+                                        <img width="96" height="96" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/>
+                                    </a>
+                                    <a href="https://www.instagram.com/skizo25/?hl=es" target="_blank">
+                                        <img width="96" height="96" src="https://img.icons8.com/color/96/instagram-new--v1.png" alt="instagram-new--v1"/>
+                                    </a>
+                                    <a href="mailto:francarrillofernandez90@gmail.com">
+                                        <img width="96" height="96" src="https://img.icons8.com/color/96/gmail--v1.png" alt="gmail--v1"/>
+                                    </a>
+                                    <a href="https://github.com/SkizoDev90" target="_blank">
+                                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="github"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -122,10 +104,10 @@
                 <p>&copy; 2026 SkizoDev90 — Francisco M. Carrillo</p>
             </footer>
         </div>
-        <script src="js/theme.js"></script>
-        <script src="js/particles.js"></script>
-        <script src="js/animations.js"></script>
-        <script src="js/vanta.js"></script>
-        <script defer src="js/i18n.js"></script>
+        <script src="../js/theme.js"></script>
+        <script src="../js/particles.js"></script>
+        <script src="../js/animations.js"></script>
+        <script src="../js/vanta.js"></script>
+        <script defer src="../js/i18n.js"></script>
     </body>
 </html>
