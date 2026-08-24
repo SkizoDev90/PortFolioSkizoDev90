@@ -1,0 +1,16 @@
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs y temporales
+*.log
+node_modules/
+
+# Documentacion interna (privada)
+AGENTS.md
