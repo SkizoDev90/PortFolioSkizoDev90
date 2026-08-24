@@ -1,4 +1,6 @@
 var vantaInstance = null;
+var vantaRetries = 0;
+var VANTA_MAX_RETRIES = 50;
 
 function getVantaColors() {
     var isLight = document.body.classList.contains('light');
@@ -25,7 +27,8 @@ function initVanta() {
             points: 14.00,
             maxDistance: 19.00
         });
-    } else {
+    } else if (vantaRetries < VANTA_MAX_RETRIES) {
+        vantaRetries++;
         setTimeout(initVanta, 100);
     }
 }
@@ -49,3 +52,11 @@ window.addEventListener('load', function () {
         document.body.classList.remove('loading');
     }
 });
+
+setTimeout(function () {
+    var loader = document.getElementById('loading-screen');
+    if (loader && !loader.classList.contains('hide')) {
+        loader.classList.add('hide');
+        document.body.classList.remove('loading');
+    }
+}, 5000);
